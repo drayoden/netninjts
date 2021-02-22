@@ -18,13 +18,12 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
         * `type oWname = {name: string, uid: strNum};`
         * `const greet = (user: oWname) => {...`
 * tut10 - function types -- type of args and return
-    `
+    ```javascript
     let greet: (a: string, b: string) => void;
     greet = (name: string, greeting: string ) => {
         console.log(`${name} says ${greeting}`);
     }
-    
-    `
+    ```
 
 
 
