@@ -12,11 +12,15 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
     * tsconfig.json - set 'target' to 'es6' and it will compile correctly, tried an arrow function.
 * tut9 - type aliases
     * string | number:
-        * `type strNum = string | number;`
-        * `const logDetails = (uid: strNum, item: string) => {...`
+    ```javascript
+    type strNum = string | number;
+    connst logDetails = (uid: strNum, item: string) => {}
+    ```
     * object with a name:
-        * `type oWname = {name: string, uid: strNum};`
-        * `const greet = (user: oWname) => {...`
+    ```javascript
+    type oWname = {name: string, uid: strNum};
+    const greet = (user: oWname) => {}
+    ```
 * tut10 - function types -- type of args and return
     ```javascript
     let greet: (a: string, b: string) => void;
