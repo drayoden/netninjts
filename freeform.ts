@@ -35,4 +35,31 @@ age2 = '25'     // works!
 
 let catAry: any[] = []
 
+// functions
+let func: Function
 
+func = () => {
+    console.log('blah')
+}
+
+let add = (a: number, b: number, c?: number|string) => {  // 'c?:' -- optional param
+let add = (a: number, b: number, c: number|string = 19) => {  // 'c:' -- 19 is now the default value for c
+
+    console.log(a + b)      // returns sum
+    console.log(c)          // returns undefined or 19 -- comment one of the function declarations above
+}
+
+add(5,15) // returns 15
+
+
+const minus = (a: number, b: nubmer ) => {
+    return a - b; 
+}
+
+let r = minus (10,6)
+r = 'blah'          // wrong! r is inferred to be a number because the minus function returns a number.
+
+
+// function return types
+const minus = (a: number, b: nubmer ): number => {} // explicitly declares the return type of number
+const minus = (a: number, b: nubmer ) => {} // has default return type of 'void'
