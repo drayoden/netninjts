@@ -48,7 +48,8 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
     * could use webpack - bundles multiple 'modules'/JS files into one file
 * tut15 - interfaces
 * tut16 - interfaces with classes, created /src/interfaces/HasFormatter.ts - imported into Invoices.ts
-
+* tut17 - render class to send the output to container
+* 
  
 
 
