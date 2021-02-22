@@ -12,18 +12,38 @@
 // ----- END TEST
 // classes - tut 12
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // readonly client: string;         // properties are 'public' by default
+    // private details: string;
+    // amount: number;
+    // constructor(c: string, d: string, a: number) {
+    //     this.client = c;
+    //     this.details = d;
+    //     this.amount = a;
+    // }
+    // tut13 - shortcut way of defining properties and constructor all at once - only works with explicit types; 'readonly', 'private', 'public', etc.
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
-        return `${this.client} owes $${this.amount} for ${details}`;
+        return `${this.client} owes ${this.amount} for ${this.details}`;
     }
 }
+// crete two new invoices...
 const ione = new Invoice('stormy', 'food', 33);
 const itwo = new Invoice('forrest', 'food', 12);
-let invoices = []; // invoices array where only Invoice are allowed are allowed
+let invoices = []; // invoices array where only Invoice objects are allowed
+// push the invoices to the array
+invoices.push(ione);
+invoices.push(itwo);
+// iterate through the invoices...
+invoices.forEach(inv => {
+    // console.log(inv.client, inv.details, inv.amount, inv.format()); // when details property was changed to 'private' this no longer works
+    // this will not work - trying to change the readonly client property:
+    // inv.client = 'boguscat'
+    console.log(inv.client, inv.amount, inv.format()); // removed the private details propert but format() still works because we are accessing details from within the class
+});
 const form = document.querySelector('.new-item-form'); // cast 'form' to correct type
 // console.log(form.children)
 // inputs
