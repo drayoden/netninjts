@@ -61,5 +61,35 @@ r = 'blah'          // wrong! r is inferred to be a number because the minus fun
 
 
 // function return types
-const minus = (a: number, b: nubmer ): number => {} // explicitly declares the return type of number
-const minus = (a: number, b: nubmer ) => {} // has default return type of 'void'
+const minus = (a: number, b: number ): number => {} // explicitly declares the return type of number
+const minus = (a: number, b: number ) => {} // has default return type of 'void'
+
+
+
+// tut 10
+
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (n1: number, n2: number, action: string) => {
+    if (action === 'add') {
+        return n1 + n2;
+    }
+}}
+
+let logD: (obj: {name: string, age: number}) => void;
+logD = (ninja: {name: string, age: number}) => {
+    console.log(`${ninja.name} is ${ninja.age} years old.`)
+}
+
+// same as above, use alias
+
+let logD2: (obj: {name: string, age: number}) => void;
+type person = {name: string, age: number}
+logD2 = (ninja: person) => {
+    console.log(`${ninja.name} is ${ninja.age} years old.`)
+}
+
+// tut 11
+
+
+

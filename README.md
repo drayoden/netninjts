@@ -23,10 +23,20 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
     ```
 * tut10 - function types -- type of args and return
     ```javascript
+    // ex1
     let greet: (a: string, b: string) => void;
     greet = (name: string, greeting: string ) => {
         console.log(`${name} says ${greeting}`);
     }
+
+    // ex2
+    let calc: (a: number, b: number, c: string) => number;
+    calc = (n1: number, n2: number, action: string) => {
+        if (action === 'add') {
+            return n1 + n2;
+        }
+    }
+
     ```
 
 
