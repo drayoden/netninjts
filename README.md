@@ -40,6 +40,15 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
     ```
 
 * tut 11 - finance logger app
+* tuts 12 & 13 - all notes are in app.js
+* tut14 - modules - only modern browsers work
+    * tsconfig.json - `target` -> `es6`, `module` -> `es2015`
+    * index.html - in <script> add `type="module"`
+    * created `/src/classes/invoices.ts` - move the Invoices class to invoices.ts.
+    * could use webpack - bundles multiple 'modules'/JS files into one file
+* tut15 - interfaces
+
+ 
 
 
 

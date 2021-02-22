@@ -1,36 +1,18 @@
-"use strict";
-// ----- TEST
-//const anchor = document.querySelector('a')!
-//console.log(anchor.href) // TS throws error because href could be null
-// could test first...
-// if(anchor) {
-//     console.log(anchor.href)
-// }
-// OR could use the '!' on the querySelector above -- as a dev, you know it will not be null
-// const form = document.querySelector('form')!  // hover over 'form' => HTMLFormElement;
-// const form = document.querySelector('.new-item-form')  // hover over 'form' => Element
-// ----- END TEST
-// classes - tut 12
-class Invoice {
-    // readonly client: string;         // properties are 'public' by default
-    // private details: string;
-    // amount: number;
-    // constructor(c: string, d: string, a: number) {
-    //     this.client = c;
-    //     this.details = d;
-    //     this.amount = a;
-    // }
-    // tut13 - shortcut way of defining properties and constructor all at once - only works with explicit types; 'readonly', 'private', 'public', etc.
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes ${this.amount} for ${this.details}`;
-    }
-}
-// crete two new invoices...
+// Interfaces (like prototyping in C/C++ it seems)
+// create the 'me' object based on the 'IsPerson' template/interface above. types input and returned must comply to the interface
+const me = {
+    name: 'stormy',
+    age: 3,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    },
+};
+import { Invoice } from './classes/Invoices.js';
+// create two new invoices...
 const ione = new Invoice('stormy', 'food', 33);
 const itwo = new Invoice('forrest', 'food', 12);
 let invoices = []; // invoices array where only Invoice objects are allowed
