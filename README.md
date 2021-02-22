@@ -49,7 +49,7 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
 * tut15 - interfaces
 * tut16 - interfaces with classes, created /src/interfaces/HasFormatter.ts - imported into Invoices.ts
 * tut17 - render class to send the output to container
-* 
+* tut18 - generics - see sandbox.ts, also reconnected to index.html to see console.log
  
 
 
