@@ -39,5 +39,8 @@ net ninja - youtube May, 2020 -- https://github.com/iamshaunjp/typescript-tutori
 
     ```
 
+* tut 11 - finance logger app
+
+
 
 
