@@ -13,6 +13,30 @@
 // const form = document.querySelector('.new-item-form')  // hover over 'form' => Element
 // ----- END TEST
 
+// classes
+class Invoice {
+    client: string
+    details: string
+    amount: number
+
+    constructor(c: string, d: string, a: number) {
+        this.client = c
+        this.details = d
+        this.amount = a
+    }
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${details}`
+    }
+}
+
+const ione = new Invoice('stormy', 'food', 33)
+const itwo = new Invoice('forrest', 'food', 12)
+
+let invoices: Invoice[] = []  // invoices array where only Invoice are allowed are allowed
+invoices.push(ione)
+invoices.push(itwo)
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement // cast 'form' to correct type
 // console.log(form.children)
 
